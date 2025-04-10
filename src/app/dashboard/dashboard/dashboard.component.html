@@ -1,0 +1,44 @@
+<div class="grid grid-cols-3 gap-3 dashbard-page">
+    @for(data of productsArray; track data){
+        <div class="products-cards " >
+          
+                <div class="card-alignment">
+                    <div class="heading">
+                    <h4>{{data.volumeInfo.title}}</h4>
+                    <div class="title-image">
+                        <div class="eng-text">
+                            <div class="publish-text">Published By: {{data.volumeInfo.authors[0]}}                 
+                            </div>
+                            <div class="image-book">Language: {{data.volumeInfo.language}}</div>
+                           
+                            <div class="pdf-text"> 
+                              
+                                <a href="/pdf-book.pdf" target="_blank">View PDF</a>
+                            </div>
+                            <span>Date of Publish {{data.volumeInfo.publishedDate}}</span>
+                            <div class="description">
+                                {{ trimDescription(data.volumeInfo.description, 20) }}
+                              </div>
+                        </div>
+                        <div class="product-image">
+                            <img src="{{data.volumeInfo.imageLinks?.thumbnail}}">
+                            <div class="average-rating">No of Pages: {{data.volumeInfo.pageCount}}</div>
+                        </div>
+                    </div>
+                    
+                   
+                      
+                    
+                    </div>
+                   
+                    <div class="button-group">
+                        <button type="submit" class="theme-btn text-center ">{{data.webReaderLink}}<a href="{{data.volumeInfo.infoLink}}">Read More</a></button>
+                    </div>
+                    </div>
+                
+            
+           
+  </div>
+    
+    }
+</div>

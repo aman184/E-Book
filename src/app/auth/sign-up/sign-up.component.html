@@ -1,0 +1,64 @@
+<section class="login-screen">
+    <div class="flex flex-col items-center justify-center mx-auto md:h-screen ">
+        <div class="login-content w-full bg-white">
+            <div class="p-6 ">
+                <h1 class=" uppercase text-center">
+                  Sign Up
+                </h1>
+                <form class="px-8 py-4" [formGroup]="signForm">
+                    <div class="group-input relative">
+                        <mat-label>Username</mat-label>
+                        <mat-form-field>
+                          <input matInput
+                                 placeholder="Enter your name"
+                                 name="username"
+                                 formControlUsername="username"
+                                 class="placeholder:italic" />
+                        </mat-form-field>
+                      </div>
+                  <div class="group-input relative">
+                      <mat-label>Email ID</mat-label>
+                      <mat-form-field>
+                          <span matTextPrefix >
+                              <mat-icon aria-hidden="false"  aria-label="Example person icon" fontIcon="person"></mat-icon>
+                              </span>
+                        <input matInput
+                               placeholder="Enter your Email ID"
+                               name="email"
+                               formControlName="email"
+                               class="placeholder:italic" />
+                      </mat-form-field>
+                    </div>
+                    <div class="group-input">
+                      <mat-label>Password</mat-label>
+                      <mat-form-field>
+                          <span matTextPrefix >
+                              <mat-icon aria-hidden="false"  aria-label="Example lock icon" fontIcon="lock"></mat-icon>
+                              </span>
+                        <input matInput
+                               placeholder="Enter your Password"
+                               name="password"
+                               formControlName="password"
+                               class="placeholder:italic" />
+                      </mat-form-field>
+                    </div>
+                    <div class="group-input">
+                        <mat-label>Confirm Password</mat-label>
+                        <mat-form-field>
+                          <input matInput
+                                 placeholder="Confirm Password"
+                                 name="confirmPassword"
+                                 formControlConfirmPassword="confirmPassword"
+                                 class="placeholder:italic" />
+                        </mat-form-field>
+                      </div>
+                    
+                    <button type="submit" class="theme-btn text-center " (click)="send()" >Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  
+  

@@ -1,0 +1,50 @@
+<section class="login-screen">
+    <div class="flex flex-col items-center justify-center mx-auto md:h-screen ">
+        <div class="login-content w-full bg-white">
+            <div class="p-6">
+                <h1 class=" uppercase text-center">
+                  LOGIN
+                </h1>
+                <input matInput [(ngModel)]="abc"/>
+                <form class="px-8 py-4" [formGroup]="loginForm">
+                  <div class="group-input relative">
+                      <mat-label>Email ID</mat-label>
+                      <mat-form-field>
+                          <span matTextPrefix >
+                              <mat-icon aria-hidden="false"  aria-label="Example person icon" fontIcon="person"></mat-icon>
+                              </span>
+                        <input matInput
+                               placeholder="Enter your Email ID"
+                               name="email"
+                               formControlName="email"
+                               class="placeholder:italic" />
+                      </mat-form-field>
+                    </div>
+                    <div class="group-input">
+                      <mat-label>Password</mat-label>
+                      <mat-form-field>
+                          <span matTextPrefix >
+                              <mat-icon aria-hidden="false"  aria-label="Example lock icon" fontIcon="lock"></mat-icon>
+                              </span>
+                        <input matInput
+                               placeholder="Enter your Password"
+                               name="password"
+                               formControlName="password"
+                               class="placeholder:italic" />
+                      </mat-form-field>
+                    </div>
+                    
+                    <button type="submit" class="theme-btn text-center " (click)="submit()">Submit</button>
+                    <div class="flex-row justify-between">
+                      <div class="forgt-password-link pb-2 text-center pt-4 cursor-pointer" routerLink="/sign-up">
+                        Sign Up
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  
+  
